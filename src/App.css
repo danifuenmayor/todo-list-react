@@ -1,38 +1,96 @@
-.App {
+body {
+  font-family: 'Baloo Da 2', cursive;
+}
+
+h1.title {
   text-align: center;
+  color: black;
+  letter-spacing: 2px;
+}
+h1.todo-header {
+  background: #796ca3;
+  color: rgb(226, 148, 191);
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div#container {
+  width: 360px;
+  margin: 0 auto;
+  border: 2px solid rgb(101, 82, 153);
+  background: #f7f7f7;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+li {
+  background: #fff;
+  padding-left: 10px;
+  line-height: 2em;
+  margin: 0;
+  color: #666;
+}
+
+li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+li.clicked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+input#addToDo {
+  font-size: 18px;
+  color: #582e70;
+  background: #d0d1ff;
+  border: none;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-border-box: border-box;
+}
+
+input#addToDo:focus {
+  background: white;
+  border: 2px solid rgb(192, 170, 241);
+  outline: none;
+  transition: 0.1s;
+}
+
+i.fa-trash {
+  margin: 7px;
+}
+
+span {
+  background: rgb(224, 165, 198);
+  height: 35px;
+  width: 0;
+  margin-right: 10px;
+  margin-left: -10px;
+  text-align: center;
+  display: inline-block;
   color: white;
+  opacity: 0;
+  transition: .2s linear;
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+li:hover span {
+  opacity: 1.0;
+  width: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#text {
+  font-family: 'Baloo Da 2', cursive;
 }
